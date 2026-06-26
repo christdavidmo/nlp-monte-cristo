@@ -2,6 +2,8 @@ import spacy
 from nltk.corpus import stopwords
 from nltk.util import bigrams
 
+
+
 from collections import Counter
 
 class TokenisationSpacy:
@@ -10,11 +12,8 @@ class TokenisationSpacy:
     def Tokenise(text):
 
         NLP = spacy.load('fr_core_news_sm')
-
         doc =NLP(text)
-
         tokens = [token.text for token in doc]
-
         return tokens
     
 

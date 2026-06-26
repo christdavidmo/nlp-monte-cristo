@@ -6,14 +6,14 @@ from collections import Counter
 
 class TokenisationNltk:
 
-    @classmethod
+    @staticmethod
     def tokenise(text):
         # ===> Tokenise le texte 
         tokens = word_tokenize(text,language='french')
         return tokens
     
 
-    @classmethod
+    @staticmethod
     def remove_stopwords(tokens):
         # ===> Supprime les stopwords français.
         stop_words = set(stopwords.words('french'))
